@@ -13,7 +13,8 @@ fn main()
     println!("Apples = {apples} and Bananas = {}", bananas + 2);
 
     let x = 5;
-    let y = 10;
+    let mut y = 10;
+    y = 10 * 3;
     println!("x = {x} and y + 2 = {}", y + 2);
     // end of playground
 
