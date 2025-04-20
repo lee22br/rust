@@ -39,4 +39,10 @@ fn main() {
     let remainder = 43 % 5;
     println!("remainder int: {}",remainder);
 
+    let boolean = true;
+    let c = 'z';
+    let z:char = 'Z';
+    let cat = '😻';
+    println!("cat : {}",cat);
+
 }
