@@ -45,4 +45,8 @@ fn main() {
     let cat = '😻';
     println!("cat : {}",cat);
 
+    //Tuple
+    let name_age: (String, u16) = ("Leandro".to_string(), 42);
+    println!("Name:{} age: {}",name_age.0, name_age.1);
+
 }
