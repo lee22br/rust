@@ -35,7 +35,7 @@ fn main() {
     println!("division int: {}", truncated);
 
     // remainder (Modulo)
-    let remainder = 11 % 5;
+    let remainder = 14 % 5;
     println!("remainder int: {}", remainder);
 
     let boolean = true;
@@ -59,6 +59,21 @@ fn main() {
     println!("fn +1: {}",plus_one(10));
     println!("fn +2: {}",plus_two(10));
     println!("fn +3: {}",plus_three(10));
+
+    //Control Flow
+    if product < 100 {
+        println!("product : {}", product);
+    } else if product == 120{
+        println!("product : {}", product);
+    } else {
+        println!("product over 100");
+    }
+
+    match remainder {
+        0 => println!("Number divisible by 5"),
+        1 | 2 | 3  => println!("Remainder 1..4"),
+        _ => println!("Remainder : {}", remainder),
+    }
 
 }
 
