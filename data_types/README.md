@@ -1,4 +1,4 @@
-# Data Types, Flow Control, Functions
+# Data Types, Flow Control, Functions, Loops
 
 ## Build
 cargo build
