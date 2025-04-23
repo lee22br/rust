@@ -69,10 +69,64 @@ fn main() {
         println!("product over 100");
     }
 
+    //Like Switch
     match remainder {
         0 => println!("Number divisible by 5"),
         1 | 2 | 3  => println!("Remainder 1..4"),
         _ => println!("Remainder : {}", remainder),
+    }
+
+    //Loop
+    let mut count = 0;
+    loop {
+        println!("Count: {}", count);
+        if count == 2{
+            break;
+        }
+        count += 1;
+    }
+
+    //loop
+    count = 0;
+    let result = loop {
+        count += 1;
+
+        if count == 5 {
+            break count * 2;
+        }
+    };
+    println!("The result is {}",result);
+
+    //loop with label
+    count = 0;
+    'loop_out:loop{
+        println!("Count: {}", count);
+        let mut remaining = 5;
+        loop {
+            println!("Count: {}", count);
+            if remaining == 4 {
+                break;
+            }
+            if count == 2 {
+                break 'loop_out;
+            }
+            remaining -= 1;
+        }
+        count += 1;
+    }
+    println!("Count is {}",count);
+
+    //while
+    count = 0;
+    while count < 5 {
+        println!("Count: {}", count);
+        count += 1;
+    }
+
+    //loop in collections
+    let vet = [10, 21, 4, 22,333];
+    for element in vet {
+        println!("Arrays: {}", element);
     }
 
 }
