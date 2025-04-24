@@ -129,6 +129,29 @@ fn main() {
         println!("Arrays: {}", element);
     }
 
+    //Variable Scope
+    let s = String::from("hello");
+    {
+        let s = "hello2";
+        println!("String: {}", s);
+    }
+    println!("String: {}", s);
+
+    let s1 = String::from("hello");
+    let s2 = s1; //its like move s1 to s2, s1 now is out of scope
+    println!("s2: {}", s2);
+
+    let s1 = String::from("hello");
+    let s2 = s1.clone();
+    println!("s1: {}", s1);
+    println!("s2: {}", s2);
+
+    // using int its work
+    let x = 5;
+    let y = x;
+    println!("x = {x}, y = {y}");
+
+    //Ownership and Functions
 }
 
 //Functions
