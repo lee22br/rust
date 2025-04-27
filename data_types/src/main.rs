@@ -152,7 +152,16 @@ fn main() {
     println!("x = {x}, y = {y}");
 
     //Ownership and Functions
+    let s1 = String::from("hello");
+    let (s2, len) = calculate_length(s1);
+    println!("The length of '{s2}' is {len}.");
+
+    //reference
+    let mut hello_world = String::from("hello");
+    change(&mut hello_world);
+    println!("Change by Ref to {}", hello_world);
 }
+
 
 //Functions
 fn print_array(array: &[i16]) {
@@ -168,4 +177,15 @@ fn plus_two(x: i32) -> i32 {
 }
 fn plus_three(x: i32) -> i32 {
      plus_one(x) + plus_two(x)
+}
+
+// function by value (ownership)
+fn calculate_length(s: String) -> (String, usize) {
+    let length = s.len(); // len() returns the length of a String
+    (s, length)
+}
+
+//function by reference
+fn change(text: &mut String) {
+    text.push_str(", world");
 }
