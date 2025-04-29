@@ -162,7 +162,6 @@ fn main() {
     println!("Change by Ref to {}", hello_world);
 }
 
-
 //Functions
 fn print_array(array: &[i16]) {
     for i in 0..array.len() {
