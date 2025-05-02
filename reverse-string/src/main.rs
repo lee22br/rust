@@ -1,9 +1,9 @@
 fn main() {
-    println!("Hello, world!");
-    reverse("TESTE");
+    let input = "LeandroIglezias";
+    println!("Call Revers function: {}",input);
+    println!("Result:  {}",reverse(&input));
 }
 
 pub fn reverse(input: &str) -> String {
-    let result: [char] = input.chars().rev().collect();
-    return result.iter().collect::<String>();
+    return input.chars().rev().collect::<String>();
 }

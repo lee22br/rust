@@ -72,7 +72,7 @@ fn main() {
     //Like Switch
     match remainder {
         0 => println!("Number divisible by 5"),
-        1 | 2 | 3  => println!("Remainder 1..4"),
+        1 | 2 | 3  => println!("Remainder 1..3"),
         _ => println!("Remainder : {}", remainder),
     }
 
