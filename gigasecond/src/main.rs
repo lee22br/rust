@@ -8,6 +8,6 @@ fn main()
 
 // Returns a DateTime one billion seconds after start.
 pub fn after(start: DateTime) -> DateTime {
-    let billion = 1000000000;
+    let billion = 1_000_000_000;
     start + Duration::seconds(billion)
 }
