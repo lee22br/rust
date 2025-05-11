@@ -1,5 +1,4 @@
 use std::fmt;
-use std::ops::Rem;
 
 //#[derive(Debug, PartialEq)]
 pub struct Clock {
