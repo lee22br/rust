@@ -1,9 +1,10 @@
-use time::PrimitiveDateTime as DateTime;
+use time::{OffsetDateTime, PrimitiveDateTime as DateTime};
 use time::Duration;
 
 fn main()
 {
-    println!("Date after One billion seconds: {}", after(Date::now()));
+    let now_odt = OffsetDateTime::now_utc();
+    println!("Date after One billion seconds: {}", after(DateTime::new(now_odt.date(),now_odt.time())));
 }
 
 // Returns a DateTime one billion seconds after start.
