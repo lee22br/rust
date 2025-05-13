@@ -1,6 +1,6 @@
 use std::fmt;
 
-//#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq)]
 pub struct Clock {
     hours: i32,
     minutes: i32,
@@ -8,7 +8,7 @@ pub struct Clock {
 impl Clock {
     pub fn new(hours: i32, minutes: i32) -> Self {
         Clock {
-            hours: minutes / 60 + hours,
+            hours: (minutes / 60 + hours) % 24,
             minutes: minutes % 60,
         }
     }
@@ -24,5 +24,7 @@ impl fmt::Display for Clock {
 
 
 fn main() {
-    println!("Hello, world!");
+    println!("Clock: {}", prinClock::new(8, 0).toString());
+    let clock = Clock::new(10, 0).add_minutes(3);
+    println!("Clock Add: {}", clock.to_string());
 }
